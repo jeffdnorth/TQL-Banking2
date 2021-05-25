@@ -50,7 +50,7 @@ namespace TQL_Banking2
             }
         public Savings2()  
             {
-            Account = new Account();
+            account = new Account();
             }
     }
 }

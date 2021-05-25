@@ -25,7 +25,7 @@ namespace TQL_Banking2
         {
             if (amount <= 0)
             {
-                throw new InsufficientParameterException(amount);
+                throw new InvalidParameterException(amount);
             }
             if (amount > Balance)
             {

@@ -9,11 +9,12 @@ namespace TQL_Banking2
         public decimal InterestRate { get; private set; } = 0.12m;
         public decimal CalculateInterestByMonths(int NumberofMonths)
         {
-            return Balance * (InterestRate / 12.0m) * NumberOfMonths);
+            return Balance * (InterestRate / 12.0m) * NumberOfMonths;
         }
         public void PayInterest(int NumberofMonths)
         {
-        Deposit(Interest);
+        var interest = CalculateInterestByMonths(NumberofMonths);
+        Deposit(interest);
         }
     }
 }
